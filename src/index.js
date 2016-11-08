@@ -1,13 +1,8 @@
-import express from 'express';
-import fetch from 'isomorphic-fetch';
-import Promise from 'bluebird';
-import _ from 'lodash';
 
-import isNumeric from './isNum';
+const express = require("express");
 
-const __DEV__ = true;
 const app = express();
-
+const isNumeric = num => !isNaN(parseFloat(num)) && isFinite(num);
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -26,7 +21,6 @@ app.get('/', (req, res) => {
     } else if (isNumeric(req.query.a) && isNumeric(req.query.b)) {
         result = String(parseFloat(req.query.a) + parseFloat(req.query.b));
     }
-    console.log(result);
     res.send(result);
 });
 
@@ -34,4 +28,3 @@ app.get('/', (req, res) => {
 app.listen(3000, function () {
     console.log('Example app listening on port 3000!');
 });
-
