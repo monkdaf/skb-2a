@@ -8,9 +8,7 @@ var _isNumeric = require('./isNumeric');
 
 var _isNumeric2 = _interopRequireDefault(_isNumeric);
 
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : { default: obj };
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var app = (0, _express2.default)();
 

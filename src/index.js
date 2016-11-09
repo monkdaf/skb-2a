@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
     } else if (isNumeric(req.query.a) && isNumeric(req.query.b)) {
         result = String(parseFloat(req.query.a) + parseFloat(req.query.b));
     }
-    res.send(result);
+    res.send(`${req.query.a ? req.query.a : 0} + ${req.query.b ? req.query.b : 0} = ${result}`);
 });
 
 
