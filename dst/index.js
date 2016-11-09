@@ -10,10 +10,7 @@ var _isNumeric2 = _interopRequireDefault(_isNumeric);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//const express = require("express");
-
 var app = (0, _express2.default)();
-//const isNumeric = num => !isNaN(parseFloat(num)) && isFinite(num);
 
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");

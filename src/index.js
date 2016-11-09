@@ -1,10 +1,7 @@
 import express from 'express';
 import isNumeric from './isNumeric';
 
-//const express = require("express");
-
 const app = express();
-//const isNumeric = num => !isNaN(parseFloat(num)) && isFinite(num);
 
 app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
